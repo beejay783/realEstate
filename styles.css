@@ -1,534 +1,569 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap");
-*{
-    margin: 0;
-    padding: 0;
-    font-family: "Mulish", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Mulish", sans-serif;
 }
 
-header{
-    height: 100vh;
-    background-color: #f6f6f6;
+header {
+  height: 100vh;
+  background-color: #f6f6f6;
 }
 
-nav{
-    padding-block: 1rem;
+nav {
+  padding-block: 1rem;
 }
 
-.genLayout{
-    max-width: 1050px;
-    margin: auto;
+.genLayout {
+  max-width: 1050px;
+  margin: auto;
 }
 
-.innerNav{
+.innerNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoText > h1 {
+  font-size: 28px;
+  font-weight: 770;
+  color: #0d254b;
+}
+
+.navRight {
+  display: flex;
+  width: 800px;
+  justify-content: space-between;
+}
+
+.navItems {
+  display: flex;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.navItems > a {
+  text-decoration: none;
+  opacity: 0.5;
+  font-weight: 700;
+  color: #0d254b;
+}
+
+.navLinks {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.navLinks > a {
+  text-decoration: none;
+  opacity: 0.6;
+  font-weight: 700;
+  color: #0d254b;
+}
+
+.btn {
+  background-color: blue;
+  padding: 20px 30px;
+  border-radius: 5px;
+  border: none;
+}
+
+.btn > a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.banner {
+  display: flex;
+}
+
+.bannerText {
+  position: absolute;
+  margin-left: 6.6rem;
+  width: 600px;
+  bottom: 14rem;
+}
+
+.bannerText > h1 {
+  padding-right: 5rem;
+  font-size: 3.9rem;
+  font-weight: 700;
+  color: #0a2046;
+}
+
+.bannerText > p {
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-top: 0.6rem;
+  opacity: 0.6;
+}
+
+.bannerBackground {
+  width: 2000px;
+  height: 90vh;
+  margin-left: 37rem;
+}
+
+.bannerBackground > img {
+  width: 100%;
+  height: 100%;
+}
+
+.addressInfo {
+  box-shadow: 0.2rem 0.2rem 0.6rem #abaab6;
+  /* margin-top: -3rem; */
+  background-color: #fff;
+  margin-bottom: 3rem;
+  z-index: 1;
+}
+
+.infoTab {
+  margin-top: -3rem;
+  /* width: 400px; */
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.infoTab > h6 {
+  padding-block: 0.5rem;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+
+.infoTab > h6:first-child {
+  background-color: #fff;
+  padding-inline: 2rem;
+}
+
+.infoTab > h6:last-child {
+  background-color: transparent;
+}
+
+.bottomInfoTabs{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-}
-
-.logoText > h1{
-    font-size: 28px;
-    font-weight: 770;
-    color:  #0d254b;
-}
-
-.navRight{
-    display: flex;
-    width: 800px;
-    justify-content: space-between;
-}
-
-.navItems{
-    display: flex;
-    gap: 3.5rem;
-    align-items: center;
-}
-
-.navItems > a{
-    text-decoration: none;
-    opacity: .5;
-    font-weight: 700;
-    color: #0d254b;
-}
-
-.navLinks{
-    display: flex;
-    gap: 3rem;
-    align-items: center;
-}
-
-.navLinks > a{
-    text-decoration: none;
-    opacity: .6;
-    font-weight: 700;
-    color:  #0d254b;
-}
-
-.btn{
-    background-color: blue;
-    padding: 20px 30px;
-    border-radius: 5px;
-    border: none;
-}
-
-.btn > a{
-    text-decoration: none;
-    color: white;
-    font-weight: 700;
-    font-size: 17px;
-}
-
-.banner{
-    display: flex;
-}
-
-.bannerText{
-    position: absolute;
-    margin-left: 6.6rem;
-    width: 600px;
-    bottom: 14rem;
-}
-
-.bannerText > h1{
-    padding-right: 5rem;
-    font-size: 3.9rem;
-    font-weight: 700;
-    color: #0a2046;
-}
-
-.bannerText > p{
-    font-weight: 700;
-    font-size: 1.4rem;
-    margin-top: .6rem;
-    opacity: .6;
-}
-
-.bannerBackground{
-    width: 2000px;
-    height: 90vh; 
-    margin-left: 37rem;
-}
-
-.bannerBackground > img{
-    width: 100%;
-    height: 100%;
-}
-
-.houseLocation{
-    height: 800px;
-    background-color: white;
-    color: #0d254b;
-}
-
-.houseLocation > h1{
-    font-size: 55px;
-    text-align: center;
-    padding-block: 20px;
-    
-}
-
-.houseLocation > h4{
-    font-size: 17px;
-    text-align: center;
-    padding-inline: 310px;
-    padding-bottom: 50px;
-    opacity: .5;
-}
-
-.locationImg > img{
-    width: 325px;
-    height: 75vh;
-    border-radius: 15px;
-    margin-inline: 10px;
-    margin-top: 30px;
-    object-fit: cover;
-}
-
-#locationText{
-    display: inline-block;
-    padding-inline: 40px;
-    font-size: 15px;
-    width: 900px;
-    height: 150px;
-    display: flex;
     justify-content: space-between;
 }
 
-.bandungLoca > h2{
-    font-size: 25px;
-    font-weight: 500;
-    padding-bottom: 20px;
+.tabCard > h4{
+    margin-bottom: 1rem;
 }
 
-.jakartaLoca > h2{
-    font-size: 25px;
-    font-weight: 500;
-    padding-bottom: 20px;
+.houseLocation {
+  height: 800px;
+  background-color: white;
+  color: #0d254b;
 }
 
-.bekasiLoca > h2{
-    font-size: 25px;
-    font-weight: 500;
-    padding-bottom: 20px;
+.houseLocation > h1 {
+  font-size: 55px;
+  text-align: center;
+  padding-block: 20px;
 }
 
-.bandungLoca > h6{
-    text-align: center;
-    margin-top: 5px;
-    font-size: 20px;
-    font-weight: 500;
-    opacity: .9;
+.houseLocation > h4 {
+  font-size: 17px;
+  text-align: center;
+  padding-inline: 310px;
+  padding-bottom: 50px;
+  opacity: 0.5;
 }
 
-.jakartaLoca > h6{
-    text-align: center;
-    margin-top: 5px;
-    font-size: 20px;
-    font-weight: 500;
-    opacity: .9;
+.locationImg > img {
+  width: 325px;
+  height: 75vh;
+  border-radius: 15px;
+  margin-inline: 10px;
+  margin-top: 30px;
+  object-fit: cover;
 }
 
-.bekasiLoca > h6{
-    text-align: center;
-    margin-top: 5px;
-    font-size: 20px;
-    font-weight: 500;
-    opacity: .9;
+#locationText {
+  display: inline-block;
+  padding-inline: 40px;
+  font-size: 15px;
+  width: 900px;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.contentWrapper{
-    padding-bottom: 4rem;
-    padding-top: 10.5rem;
-    display: flex;
+.bandungLoca > h2 {
+  font-size: 25px;
+  font-weight: 500;
+  padding-bottom: 20px;
 }
 
-.contentImgWrapper{
-    display: flex;
-    position: relative;
-    padding-right: 30px;
+.jakartaLoca > h2 {
+  font-size: 25px;
+  font-weight: 500;
+  padding-bottom: 20px;
 }
 
-.contentImgWrapper > img{
-    height: 96vh;
-    width: 28rem;
-    object-fit: cover;
-    border-radius: 17px;
-    margin-right: 30px;
-    position: relative;
+.bekasiLoca > h2 {
+  font-size: 25px;
+  font-weight: 500;
+  padding-bottom: 20px;
 }
 
-.viewHouse{
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
-    position: absolute;
-    top: 1rem;
-    right: 2.5rem;
-    background-color: white;
-    padding: 6px 14px;
+.bandungLoca > h6 {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  opacity: 0.9;
 }
 
-.viewHouse > span{
-    padding: 1rem;
-    background-color: blue;
-    color: white;
-    width: 10px;
-    height: 10px;
-    border-radius: 100%;
-    margin: 1rem;
-    display: flex;
-    align-items: center;
-    font-size: 20px;
+.jakartaLoca > h6 {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  opacity: 0.9;
 }
 
-
-.viewHouseText{
-    background-color: white;
+.bekasiLoca > h6 {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  opacity: 0.9;
 }
 
-.viewHouseText > h2{
-    text-transform: capitalize;
-    font-size: 17px;
-    font-weight: 800;
-    color: #051d43;
+.contentWrapper {
+  padding-bottom: 4rem;
+  padding-top: 10.5rem;
+  display: flex;
 }
 
-.viewHouseText > h3{
-    text-transform: capitalize;
-    font-weight: 600;
-    font-size: 15px;
-    padding-top: 5px;
-    color: blue;
+.contentImgWrapper {
+  display: flex;
+  position: relative;
+  padding-right: 30px;
 }
 
-.smallPictureImg{
-    border: 10px solid white;
-    position: absolute;
-    bottom: -3.5rem;
-    right: -1.5rem;
-    border-radius: 20px;
-    height: 49vh;
-    width: 16rem;
-    margin: 40px;
+.contentImgWrapper > img {
+  height: 96vh;
+  width: 28rem;
+  object-fit: cover;
+  border-radius: 17px;
+  margin-right: 30px;
+  position: relative;
 }
 
-.smallPictureImg > img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    position: absolute;
-    border-radius: 20px;
+.viewHouse {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  position: absolute;
+  top: 1rem;
+  right: 2.5rem;
+  background-color: white;
+  padding: 6px 14px;
 }
 
-.luxuryMinimalist{
-    background-color: white;
-    text-transform: capitalize;
-    font-size: 12px;
-    position: absolute;
-    bottom: 1rem;
-    left: 3rem;
-    padding: 10px;
-    padding-inline: 17px;
-    border-radius: 10px;
+.viewHouse > span {
+  padding: 1rem;
+  background-color: blue;
+  color: white;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
 }
 
-.luxuryMinimalist > h2{
-    font-weight: 800;
-    font-size: 22px;
-    padding-bottom: 8px;
-    color: #051d43;
+.viewHouseText {
+  background-color: white;
 }
 
-.luxuryMinimalist > h4{
-    font-size: 18px;
-    font-weight: 700;
-    opacity: .7;
-    padding-top: 8px;
+.viewHouseText > h2 {
+  text-transform: capitalize;
+  font-size: 17px;
+  font-weight: 800;
+  color: #051d43;
 }
-.contentWrapperText{
+
+.viewHouseText > h3 {
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 15px;
+  padding-top: 5px;
+  color: blue;
+}
+
+.smallPictureImg {
+  border: 10px solid white;
+  position: absolute;
+  bottom: -3.5rem;
+  right: -1.5rem;
+  border-radius: 20px;
+  height: 49vh;
+  width: 16rem;
+  margin: 40px;
+}
+
+.smallPictureImg > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  border-radius: 20px;
+}
+
+.luxuryMinimalist {
+  background-color: white;
+  text-transform: capitalize;
+  font-size: 12px;
+  position: absolute;
+  bottom: 1rem;
+  left: 3rem;
+  padding: 10px;
+  padding-inline: 17px;
+  border-radius: 10px;
+}
+
+.luxuryMinimalist > h2 {
+  font-weight: 800;
+  font-size: 22px;
+  padding-bottom: 8px;
+  color: #051d43;
+}
+
+.luxuryMinimalist > h4 {
+  font-size: 18px;
+  font-weight: 700;
+  opacity: 0.7;
+  padding-top: 8px;
+}
+/* .contentWrapperText{
     
+} */
+
+.contentWrapperText > h1 {
+  text-transform: capitalize;
+  font-size: 3.1rem;
+  font-weight: 700;
+  color: #051d43;
 }
 
-.contentWrapperText > h1{
-    text-transform: capitalize;
-    font-size: 3.1rem;
-    font-weight: 700;
-    color: #051d43;
-    
+.contentWrapperText > p {
+  font-weight: 700;
+  font-size: 18px;
+  padding-top: 1.4rem;
+  padding-right: 5rem;
+  opacity: 0.5;
 }
 
-.contentWrapperText > p{
-    font-weight: 700;
-    font-size: 18px;
-    padding-top: 1.4rem;
-    padding-right: 5rem;
-    opacity: .5;
+.contentWrapperText > h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  padding-top: 15px;
+  color: #3b5ced;
 }
 
-.contentWrapperText > h2{
-    font-size: 4rem;
-    font-weight: 700;
-    padding-top: 15px;
-    color: #3b5ced;
+.seeMoreBtn {
+  background-color: #3d5bee;
+  border: none;
+  padding: 10px 65px;
+  margin-top: 2rem;
 }
 
-.seeMoreBtn{
-    background-color: #3d5bee;
-    border: none;
-    padding: 10px 65px;
-    margin-top: 2rem;
+.seeMoreBtn > a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
 }
 
-.seeMoreBtn > a{
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
+.secThree {
+  margin-block: 2rem;
 }
 
-.secThree{
-    margin-block: 2rem;
+.propertyDeals {
+  margin-left: 6.3rem;
 }
 
-.propertyDeals{
-    margin-left: 6.3rem;
+.propertyDeals > h1 {
+  text-transform: capitalize;
+  font-size: 3.5rem;
+  color: #051d43;
+  font-weight: 700;
+  padding-block: 2rem;
 }
 
-.propertyDeals > h1{
-    text-transform: capitalize;
-    font-size: 3.5rem;
-    color: #051d43;
-    font-weight: 700;
-    padding-block: 2rem;
+.propertyImgWrapper {
+  margin-block: 2.1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  width: 100%;
 }
 
-.propertyImgWrapper{
-    margin-block: 2.1rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    width: 100%;
+.imgCardWrapper {
+  width: 450px;
+  border: 0.5px solid rgb(250, 248, 248);
+  border-radius: 15px;
+}
+.imgCardWrapper > img {
+  object-fit: cover;
+  width: 100%;
+  height: 55vh;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
-.imgCardWrapper{
-    width: 450px;
-    border: 0.5px solid rgb(250, 248, 248);
-    border-radius: 15px;
-    
-}
-.imgCardWrapper> img{
-    object-fit: cover;
-    width: 100%;
-    height: 55vh;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+.cardWrapper {
+  border-top: none;
+  width: 385px;
+  padding-inline: 2rem;
 }
 
-.cardWrapper{
-    border-top: none;
-    width: 385px;
-    padding-inline: 2rem;
+.priceTag > h3 {
+  font-size: 23px;
+  margin-top: 1rem;
 }
 
-.priceTag > h3{
-    font-size: 23px;
-    margin-top: 1rem;
+.priceTag > h2 {
+  font-size: 26px;
+  text-transform: capitalize;
+  padding-block: 12px;
+  opacity: 0.9;
+  color: #051d43;
 }
 
-.priceTag > h2{
-    font-size: 26px;
-    text-transform: capitalize;
-    padding-block: 12px;
-    opacity: .9;
-    color: #051d43;
+.cardWrapper > hr {
+  border: 1px solid rgb(189, 201, 189);
 }
 
-.cardWrapper > hr{
-    border: 1px solid rgb(189, 201, 189);
+.tabs {
+  padding-block: 15px;
 }
 
-.tabs{
-    padding-block: 15px;
-}
-
-.locationTab{
-    display: flex;
-    gap: 1.5rem;
+.locationTab {
+  display: flex;
+  gap: 1.5rem;
 }
 
 .locationTab > h6,
-.roomTab > h6{
-    font-size: 17px;
-    font-weight: 700;
-    opacity: .7;
+.roomTab > h6 {
+  font-size: 17px;
+  font-weight: 700;
+  opacity: 0.7;
 }
 
-.roomTab{
-    display: flex;
-    gap: 2.1rem;
-    margin-top: 18px;
+.roomTab {
+  display: flex;
+  gap: 2.1rem;
+  margin-top: 18px;
 }
 
-.secFour{
-    margin-block: 8rem;
+.secFour {
+  margin-block: 8rem;
 }
 
-.newsBlog{
-    margin-block: 2rem;
-    background-color: #061f48;
-    border-radius: 15px;
-    padding-bottom: 3rem;
+.newsBlog {
+  margin-block: 2rem;
+  background-color: #061f48;
+  border-radius: 15px;
+  padding-bottom: 3rem;
 }
 
-.subscribe{
-    margin: auto;
-    padding-top: 4rem;
-    padding-bottom: 2rem;
+.subscribe {
+  margin: auto;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
 }
 
-.subscribe > h2{
-    text-transform: capitalize;
-    text-align: center;
-    color: white;
-    font-size: 2.5rem;
-    font-weight: 650;
-    padding-inline: 15rem;
+.subscribe > h2 {
+  text-transform: capitalize;
+  text-align: center;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 650;
+  padding-inline: 15rem;
 }
 
-.inputButton{
-    background-color: #1e365c;
-    margin: auto;
-    width: 30rem;
-    height: 60px;
-    padding: 8px;
-    border-radius: 5px;
-    
+.inputButton {
+  background-color: #1e365c;
+  margin: auto;
+  width: 30rem;
+  height: 60px;
+  padding: 8px;
+  border-radius: 5px;
 }
 
-.inputButton > input{
-    background-color: #1e365c;
-    border: none;
-    width: 22.3rem;
-    height: 100%;
-    font-size: 20px;
-
+.inputButton > input {
+  background-color: #1e365c;
+  border: none;
+  width: 22.3rem;
+  height: 100%;
+  font-size: 20px;
 }
 
-.inputButton > input::placeholder{
-    color: #abaab6;
+.inputButton > input::placeholder {
+  color: #abaab6;
 }
 
-.inputButton > button{
-    border: none;
-    background-color: #3d5bee;
-    color: white;
-    text-transform: capitalize;
-    font-size: 20px;
-    padding: 5px;
-    height: 100%;
-    border-radius: 3px;
+.inputButton > button {
+  border: none;
+  background-color: #3d5bee;
+  color: white;
+  text-transform: capitalize;
+  font-size: 20px;
+  padding: 5px;
+  height: 100%;
+  border-radius: 3px;
 }
 
-.footerWrapper{
-    display: flex;
-    gap: 6rem;
-    margin-block: 3rem;
+.footerWrapper {
+  display: flex;
+  gap: 6rem;
+  margin-block: 3rem;
 }
 
-.berumah > h3{
-    font-size: 23px;
-    color: #061c44;
-    margin-bottom: 20px;
+.berumah > h3 {
+  font-size: 23px;
+  color: #061c44;
+  margin-bottom: 20px;
 }
 
-.berumah > p{
-    font-weight: 600;
-    font-size: 16px;
-    color: #9d9d9d;
-    padding-right: px;
+.berumah > p {
+  font-weight: 600;
+  font-size: 16px;
+  color: #9d9d9d;
+  padding-right: px;
 }
 
 .support > h5,
 .legal > h5,
-.socialMedia > h5{
-    font-weight: 600;
-    font-size: 17px;
-    color: #4866da;
-    margin-bottom: 20px;
+.socialMedia > h5 {
+  font-weight: 600;
+  font-size: 17px;
+  color: #4866da;
+  margin-bottom: 20px;
 }
 
 .support > p,
 .legal > p,
-.socialMedia > p{
-    font-weight: 700;
-    text-transform: capitalize;
-    font-size: 14px;
-    color: #9d9d9d;
+.socialMedia > p {
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 14px;
+  color: #9d9d9d;
 }
 
-.legal > p{
-    white-space: nowrap;
+.legal > p {
+  white-space: nowrap;
 }
 
-.socialMedia > h5{
-    padding-bottom: 0px;
-    white-space: nowrap;
+.socialMedia > h5 {
+  padding-bottom: 0px;
+  white-space: nowrap;
 }
