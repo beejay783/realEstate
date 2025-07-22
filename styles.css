@@ -19,6 +19,9 @@ nav {
   margin: auto;
 }
 
+.hamburger, #toggle{
+  display: none;
+}
 .innerNav {
   display: flex;
   justify-content: space-between;
@@ -79,51 +82,45 @@ nav {
 
 .banner {
   display: flex;
+  position: relative;
 }
 
 .bannerText {
-  margin-left: 6.6rem;
-  height: 18rem;
-  width: 900px;
-  margin-top: 3rem;
+  height: 20rem;
+  width: 600px;
+  position: absolute;
+  z-index: 1;
+  left: 6.5rem;
+  top: 5rem;
 }
 
 .bannerText > h1 {
-  padding-right: 5rem;
-  font-size: 3rem;
-  font-weight: 750;
-  color: #051d44;
+  font-size: 3.7rem;
+  font-weight: 800;
+  color: #051f48;
 }
 
-.bannerText >h1:nth-child(2){
-  font-size: 2.8rem;
-  padding-right: 2rem;
-  margin-bottom: 2rem;
+.bannerText > h1:nth-child(3) {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .bannerText > p {
   font-weight: 700;
-  font-size: 1.150rem;
-  margin-top: 0.6rem;
-  opacity: 0.6;
-  z-index: 1;
-  position: relative;
+  font-size: 1.25rem;
+  opacity: 0.4;
 }
 
 .bannerBackground {
-  width: 1200px;
-  margin-top: .5rem;
-  height: 90vh;
-  background-image: url(./image/lance-anderson-QdAAasrZhdk-unsplash-min-qougt4c4n043p23oco8xraar113da44ji2v53p8tm-removebg-preview.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
-
-.bannerBackground > img{
-  width: 100%;
-  height: 100%;
+  width: 700px;
+  height: 95vh;
+  background-size: 120%;
+  background-position: bottom;
   object-fit: cover;
+  background-repeat: no-repeat;
+  background-image: url("./image/a7c49d_e411f2c743a94dbfa93fb76217efe3b5_mv2-removebg-preview.png");
+  position: absolute;
+  right: 0;
 }
 
 .addressInfo {
@@ -133,7 +130,6 @@ nav {
   /* margin-top: -3rem; */
   background-color: #fff;
   margin-bottom: 2rem;
-  z-index: 1;
   padding: 2rem;
 }
 
@@ -175,12 +171,12 @@ nav {
   color: #313131;
 }
 
-.tabCard > h5{
+.tabCard > h5 {
   font-size: 1.2rem;
   color: #313131;
 }
 
-.tabCard > button{
+.tabCard > button {
   padding: 1rem 1.7rem;
   font-size: 1.2rem;
   font-weight: 600;
@@ -193,7 +189,7 @@ nav {
 .houseLocation {
   height: 800px;
   background-color: white;
-  color: #0d254b;
+  color: #051f48;
 }
 
 .houseLocation > h1 {
@@ -205,75 +201,45 @@ nav {
 .houseLocation > h4 {
   font-size: 17px;
   text-align: center;
-  padding-inline: 310px;
-  padding-bottom: 50px;
   opacity: 0.5;
 }
 
-.locationImg > img {
-  width: 325px;
+.searchLocation {
+  margin-block: 2.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.locationWrapper {
+  width: 345px;
+}
+
+.locationWrapper > img {
+  width: 100%;
   height: 75vh;
   border-radius: 15px;
-  margin-inline: 10px;
-  margin-top: 30px;
   object-fit: cover;
 }
 
-#locationText {
-  display: inline-block;
-  padding-inline: 40px;
-  font-size: 15px;
-  width: 900px;
-  height: 150px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.bandungLoca > h2 {
-  font-size: 25px;
-  font-weight: 500;
-  padding-bottom: 20px;
-}
-
-.jakartaLoca > h2 {
-  font-size: 25px;
-  font-weight: 500;
-  padding-bottom: 20px;
-}
-
-.bekasiLoca > h2 {
-  font-size: 25px;
-  font-weight: 500;
-  padding-bottom: 20px;
-}
-
-.bandungLoca > h6 {
+.tabWrapper > h2 {
   text-align: center;
-  margin-top: 5px;
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+.tabWrapper > h6 {
+  text-align: center;
+  margin-bottom: 0.7rem;
   font-size: 20px;
   font-weight: 500;
-  opacity: 0.9;
 }
 
-.jakartaLoca > h6 {
-  text-align: center;
-  margin-top: 5px;
-  font-size: 20px;
-  font-weight: 500;
-  opacity: 0.9;
+.secTwo {
+  margin-top: 2rem;
 }
-
-.bekasiLoca > h6 {
-  text-align: center;
-  margin-top: 5px;
-  font-size: 20px;
-  font-weight: 500;
-  opacity: 0.9;
-}
-
 .contentWrapper {
-  padding-bottom: 4rem;
-  padding-top: 10.5rem;
+  margin-block: 6rem;
   display: flex;
 }
 
@@ -602,4 +568,141 @@ nav {
 .socialMedia > h5 {
   padding-bottom: 0px;
   white-space: nowrap;
+}
+
+/* responsiveness */
+@media (min-width: 260px) and (max-width: 460px) {
+  .navRight {
+    display: none;
+    position: absolute;
+    width: 85%;
+    padding: 1.4rem 1rem;
+    top: 3.5rem;
+    right: 3px;
+    z-index: 1;
+    background-color: #010e24;
+    opacity: 0.9;
+    transform: translate(100% 0);
+    transition: transform 0.5s cubic-bezier(0.77 0.2 0.05 1);
+  }
+
+  .hamburger {
+    display: block;
+    margin-right: 1rem;
+    font-size: 1.6rem;
+    color: #051d43;
+    font-weight: 800;
+  }
+  .navItems {
+    flex-direction: column;
+    margin-right: 18rem;
+    white-space: nowrap;
+  }
+
+  .navItems > a {
+    color: white;
+    border-bottom: 2px solid white;
+  }
+
+  .navLinks {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .navLinks > a {
+    color: white;
+    border-bottom: 2px solid white;
+  }
+
+  .btn {
+    margin-top: 1rem;
+  }
+
+  #toggle:checked + .navRight {
+    display: block;
+    transform: none;
+  }
+  #toggle {
+    display: none;
+  }
+
+  .banner {
+    width: 100%;
+    flex-direction: column;
+    position: relative;
+  }
+
+  header {
+    height: 50vh;
+  }
+
+  .bannerBackground {
+    width: 50%;
+    background-position: top;
+    background-size: 100%;
+  }
+
+  .bannerText {
+    width: 100%;
+    left: 2rem;
+    top: 2rem;
+  }
+
+  .bannerText > h1 {
+    font-size: 1.3rem;
+  }
+
+  .bannerText > h1:nth-child(3) {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+  }
+
+  .bannerText > p {
+    font-size: 0.5rem;
+  }
+
+  .addressInfo {
+    width: calc(100% - 40px);
+    padding: 1rem;
+  }
+
+  .bottomInfoTabs {
+    flex-direction: column;
+  }
+
+  .tabCard {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .houseLocation {
+    width: calc(100% - 40px);
+  }
+
+  .houseLocation > h1 {
+    font-size: 1.5rem;
+  }
+
+  .houseLocation > h4 {
+    font-size: 0.8rem;
+  }
+
+  .searchLocation {
+    flex-direction: column;
+  }
+  .locationWrapper {
+    width: 100%;
+  }
+
+  .contentWrapper {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .contentImgWrapper {
+    width: 100%;
+  }
+
+  .propertyDeals
 }
